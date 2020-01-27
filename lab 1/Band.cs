@@ -17,9 +17,13 @@ namespace lab_1
 
 
         #endregion props
+        public Band()
+        {
 
+        }
         #region Constructor
-        public Band(string name, int formed, string members )
+
+        public Band(string name, int formed, string members)
         {
             Name = name;
             Formed = formed;
@@ -28,13 +32,56 @@ namespace lab_1
 
 
 
-
         #endregion Constructor
+        public override string ToString()
+        {
+            return (this.Name + Formed + Members);
+        }
+
+    }
+    public class RockBand : Band
+    {
+        public RockBand(string name, int formed, string members)
+        {
+            Name = name;
+            Formed = formed;
+            Members = members;
+        }
+
+
+        public override string ToString()
+        {
+            return (this.Name + " - rock Band");
+        }
 
 
     }
-    //public class RockBand : Band
-    //{
 
-    //}
+    public class IndieBand : Band
+    {
+        public IndieBand(string name, int formed, string members)
+        {
+            Name = name;
+            Formed = formed;
+            Members = members;
+        }
+        public override string ToString()
+        {
+            return (this.Name + " - rock Band");
+        }
+    }
+    public class PopBand : Band
+    {
+        public PopBand(string name, int formed, string members)
+        {
+            Name = name;
+            Formed = formed;
+            Members = members;
+        }
+        public override string ToString()
+        {
+            return (this.Name + " - rock Band");
+        }
+
+    }
 }
